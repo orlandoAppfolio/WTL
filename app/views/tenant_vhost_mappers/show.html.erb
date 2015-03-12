@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vhost:</strong>
+  <%= @tenant_vhost_mapper.vhost %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @tenant_vhost_mapper.email %>
+</p>
+
+<%= link_to 'Edit', edit_tenant_vhost_mapper_path(@tenant_vhost_mapper) %> |
+<%= link_to 'Back', tenant_vhost_mappers_path %>

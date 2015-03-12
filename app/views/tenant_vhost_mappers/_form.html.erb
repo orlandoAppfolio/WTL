@@ -1,0 +1,25 @@
+<%= form_for(@tenant_vhost_mapper) do |f| %>
+  <% if @tenant_vhost_mapper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tenant_vhost_mapper.errors.count, "error") %> prohibited this tenant_vhost_mapper from being saved:</h2>
+
+      <ul>
+      <% @tenant_vhost_mapper.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :vhost %><br>
+    <%= f.text_field :vhost %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

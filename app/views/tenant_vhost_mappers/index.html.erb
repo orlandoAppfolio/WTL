@@ -1,0 +1,10 @@
+  <%= form_for :tenant_vhost_mapper, :url =>tenant_vhost_mappers_path  do |f| %>
+    Email: <%= f.text_field :email %><br />
+    <%= f.submit %>
+  <% end %>
+
+
+  <%= form_for :tenant_vhost_mapper, :url =>tenant_vhost_mappers_path  do |f| %>
+    vhost: <%= f.text_field :vhost %><br />
+    <%= f.submit %>
+  <% end %>
