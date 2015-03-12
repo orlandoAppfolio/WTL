@@ -10,7 +10,7 @@ class TenantVhostMappersController < ApplicationController
       vhosts = tenant_vhost_mapper.find_vhosts
       links = tenant_vhost_mapper.find_login_links
       if !links.present?
-        render 'sorry can not find your email'
+        render text: "sorry can not find your email: #{email}"
       elsif links.size == 1
         return redirect_to links.first
       else
