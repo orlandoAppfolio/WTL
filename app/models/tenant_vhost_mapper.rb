@@ -4,30 +4,25 @@ class TenantVhostMapper < ActiveRecord::Base
     @vhost = vhost
   end
 
-  def self.find_login_link(email: )
-    tenant = TenantVhostMapper.find_by_email(email)
-    link = "https://#{tenant.vhost}.appfolio.com/connect/users/sign_in"
+  def find_vhost_link
+    link = "https://#{@vhost}.appfolio.com/connect/users/sign_in"
   end
 
-  def self.find_vhost_link(vhost: )
-    link = "https://#{vhost}.appfolio.com/connect/users/sign_in"
+  def find_login_links
+    tenants = TenantVhostMapper.where(email: @email)
+    links = tenants.map{|tenant| tenant.to_link(@email) }
   end
 
-  #handle lists of users case
-  def self.find_login_links(email: )
-    tenants = self.where(email: email)
-    links = tenants.map(&:to_link)
+  def to_link(email)
+    "https://#{vhost}.appfolio.com/connect/users/sign_in?user[email]=#{email}"
   end
 
-  def to_link
-    "https://#{vhost}.appfolio.com/connect/users/sign_in"
+  def self.to_link(vhost, email='')
+    "https://#{vhost}.appfolio.com/connect/users/sign_in?user[email]=#{email}"
   end
 
-  def self.to_link(vhost)
-    "https://#{vhost}.appfolio.com/connect/users/sign_in"
-  end
-  def self.find_vhosts(email: )
-    tenants = self.where(email: email)
+  def find_vhosts
+    tenants = TenantVhostMapper.where(email: @email)
     vhosts = tenants.map(&:vhost)
   end
 

@@ -1,7 +1,7 @@
 <%= form_for :tenant_vhost_mapper, :url =>tenant_vhost_mappers_second_step_path  do |f| %>
 <div class="field">
   <%@vhosts.each do |vhost|%>
-    <%= radio_button_tag(:link, TenantVhostMapper.to_link(vhost)) %>
+    <%= radio_button_tag(:link, TenantVhostMapper.to_link(vhost, email=@email)) %>
     <%= label_tag(:vhost, vhost) %>
   <%end%>
   <%= f.submit %>
