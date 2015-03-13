@@ -28,8 +28,8 @@
     <div class="my_email">
       <h3>Enter your email associated with the Tenant Portal.</h3>
       <%= form_for :tenant_vhost_mapper, :url =>tenant_vhost_mappers_path  do |f| %>
-        Email: <%= f.text_field :email %><br />
-        <%= f.submit 'Continue' %>
+        <%= f.text_field :email, :placeholder => "Email" %><br />
+        <%= f.button 'Continue' %>
       <% end %>
     </div>
   </div>
@@ -40,14 +40,14 @@
     <div class="my_email right">
       <h3>Enter your management office's AppFolio domain.</h3>
         <%= form_for :tenant_vhost_mapper, :url =>tenant_vhost_mappers_path  do |f| %>
-        <label>Property Management Website</label>
+        <label></label>
         <div class="medium-6 columns" style="padding-left: 0;">
-          <%= f.text_field :vhost %>
+          <%= f.text_field :vhost, :placeholder => 'YourAccountName' %>
         </div>
         <div class="medium-6 columns" style="padding-left: 0;">
           <p style="margin-top: 10px;">.appfolio.com/connect</p>
         </div>
-          <%= f.submit 'Continue'%>
+          <%= f.button 'Continue'%>
         <% end %>
     </div>
     <h4>Still got questions? Call us at 1-800-888-8888.</h4>
