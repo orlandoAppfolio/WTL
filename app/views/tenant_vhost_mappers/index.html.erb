@@ -1,10 +1,66 @@
-  <%= form_for :tenant_vhost_mapper, :url =>tenant_vhost_mappers_path  do |f| %>
-    Email: <%= f.text_field :email %><br />
-    <%= f.submit %>
-  <% end %>
+<head>
+  <style>
+    body {
+      background: url('assets/bkgd_room.png') no-repeat center center fixed;
+    }
+  </style>
+</head>
+<body>
 
+<div style="background-color: #007C9E;color: #FFF;font-size: 1.em;margin-bottom: 40px;padding: 15px 20px;text-align: right;">
+  <p>Welcome to Tenant Portal, Powered by AppFolio</p>
+</div>
 
-  <%= form_for :tenant_vhost_mapper, :url =>tenant_vhost_mappers_path  do |f| %>
-    vhost: <%= f.text_field :vhost %><br />
-    <%= f.submit %>
-  <% end %>
+<div class="row">
+  <div class="large-12 columns">
+    <a href=""><img src="assets/logo.png" alt="AppFolio Property Manager logo" /></a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-11 medium-offset-1 columns">
+    <h1>Log in to Tenant Portal</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-5 medium-offset-1 columns">
+    <div class="my_email">
+      <h3>Enter your email associated with the Tenant Portal.</h3>
+      <%= form_for :tenant_vhost_mapper, :url =>tenant_vhost_mappers_path  do |f| %>
+        Email: <%= f.text_field :email %><br />
+        <%= f.submit 'Continue' %>
+      <% end %>
+    </div>
+  </div>
+  <div class="medium-1 columns">
+    <p class="or">OR</p>
+  </div>
+  <div class="medium-5 columns">
+    <div class="my_email right">
+      <h3>Enter your management office's AppFolio domain.</h3>
+        <%= form_for :tenant_vhost_mapper, :url =>tenant_vhost_mappers_path  do |f| %>
+        <label>Property Management Website</label>
+        <div class="medium-6 columns" style="padding-left: 0;">
+          <%= f.text_field :vhost %>
+        </div>
+        <div class="medium-6 columns" style="padding-left: 0;">
+          <p style="margin-top: 30px;">.appfolio.com/connect</p>
+        </div>
+          <%= f.submit 'Continue'%>
+        <% end %>
+    </div>
+    <h4>Still got questions? Call us at 1-800-888-8888.</h4>
+  </div>
+</div>
+
+<footer>
+  <div class="medium-6 columns">
+    <p>&copy;2015 AppFolio, Inc</p>
+  </div>
+  <div class="medium-6 columns">
+    <span>Powered by <img src="assets/logo_white.png" alt="Powered by AppFolio Property Manager" /></span>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0
+}
+body {
+	background: url('/images/bkgd_room.png') no-repeat center center fixed;
+	background-size: cover;
+	color: #333;
+	font-family: "Helvetica Neue",Helvetica,sans-serif;
+	font-size: 14px;
+}
+body h1 {color: #007C9E;font-size: 18px;margin: 40px 0 30px;}
+body h2 {color: #007C9E;font-size: 15px;margin: 0 0 20px;text-align: center;}
+body h3 {font-size: 14px;margin-bottom: 30px;}
+body h4 {color: #333;font-size: 18px;}
+body label {color: #666;}
+body input {border: solid 2px #00ADDD;color: #666;display: block;font-size: 16px;height: 40px;margin: 8px 0 15px;width: 100%;}
+body button {background-color: #00AEDB;border: 0;color: #FFF;font-size: 21px;margin: 15px 0 15px;padding: 6px 0;width: 100%;}
+body footer {background-color: #888;color: #FFF;padding: 20px 20px 18px;position: absolute;bottom: 0;width: 100%;}
+body footer p {margin-top: 10px;}
+body footer span {display: inline-block;float: right;line-height: 35px;vertical-align: middle;}
+body footer img {float: right;margin-left: 10px;}
+.my_email {background-color: #FFF;border-left: solid 8px #009ECC;box-shadow: 1px 1px 4px #888;padding: 45px 25px 55px;}
+.my_email.right {margin-bottom: 30px;}
+.or {color: #007C9E;font-size: 30px;margin-top: 120px;text-shadow: 1px 1px 1px #888;}
+.login {padding: 25px 25px 20px;}
+.login p {color: #666;font-size: 12px;margin: 8px 0;}
+.meridian {display: block;height: 70px;margin: 0 auto 20px;width: 233px;}

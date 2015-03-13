@@ -1,6 +1,5 @@
 WTL::Application.routes.draw do
-  get "appfolio/index"
-  root "appfolio#index"
+  root "tenant_vhost_mappers#index"
   resources :tenant_vhost_mappers
   post 'tenant_vhost_mappers/second_step' => 'tenant_vhost_mappers#second_step'
 
