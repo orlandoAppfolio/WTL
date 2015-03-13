@@ -1,0 +1,2 @@
+module AppfolioHelper
+end
